@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js" integrity="sha512-pUhApVQtLbnpLtJn6DuzDD5o2xtmLJnJ7oBoMsBnzOkVkpqofGLGPaBJ6ayD2zQe3lCgCibhJBi4cj5wAxwVKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
@@ -20,11 +21,15 @@
             <br><br>
             <button onclick="generateCode()">Generate</button>
         </div>
+        <div id="dividerDiv"></div>
         <div id="resultDiv">
             <div id="adsDiv">
                 ADS
             </div>
-            <canvas id="canvasDiv"></canvas>
+            <div id="qrDiv">
+                <i class="bi bi-x-circle-fill" onclick="closeQr()"></i>
+                <canvas id="canvasDiv"></canvas>
+            </div>
             <p id="qrText"></p>
         </div>
     </div> 

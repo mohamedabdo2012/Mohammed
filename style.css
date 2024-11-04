@@ -36,18 +36,20 @@ body {
     font-size: 20px;
     border-radius: 10px;
     border: none;
-    background-color:  rgba(0, 255, 13, 0.678);
+    background-color: 
+    rgba(0, 255, 13, 0.678);
     transition: 0.5s;
 }
 
 #inputDiv button:hover {
     cursor: pointer;
-    background-color: rgba(150, 241, 162, 0.842); 
-    color: white
+    background-color: rgba(150, 241, 162, 0.842);
+    color: white;
 }
 
 #inputDiv button:active {
-    background-color: rgb(31, 122, 3);
+    background-color: 
+    rgb(31, 122, 3);
 }
 
 #resultDiv #adsDiv {
@@ -60,12 +62,83 @@ body {
     align-items: center;
     margin: auto;
     margin-top: 30px;
+    border-radius: 10px;
+}
+
+#resultDiv #qrDiv {
+    position: relative;
+    display: none;
+}
+
+#resultDiv #qrDiv i {
+    font-size: 35px;
+    color: white;
+    position: absolute;
+    right: -30px;
+    top: 0;
+}
+
+#resultDiv #qrDiv i:hover {
+    cursor: pointer;
 }
 
 #resultDiv #canvasDiv {
     padding: 20px;
     border-radius: 20px;
     background-color: white;
-    display: none;
     margin-top: 20px;
+}
+
+#resultDiv #qrText {
+    font-size: 25px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#mainDiv #dividerDiv {
+    display: none;
+    width: 5px;
+    height: 50vh;
+    margin: 0 100px;
+    background-color: white;
+}
+
+
+@media (min-width: 1200px) {
+    
+    #mainDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+    }
+    
+    #inputDiv h1 {
+        font-size: 100px;
+    }
+
+    #inputDiv input {
+        padding: 30px 50px;
+        font-size: 25px;
+        border-radius: 20px;
+    }
+
+    #inputDiv button {
+        padding: 30px 50px;
+        font-size: 25px;
+        border-radius: 20px;
+        margin-top: 30px;
+    }
+
+    #mainDiv #dividerDiv {
+        display: block;
+    }
+
+    #resultDiv #adsDiv {
+        width: 300px;
+        height: 300px;
+        font-size: 50px;
+        margin-bottom: 20px;
+    }
+
 }

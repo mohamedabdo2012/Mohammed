@@ -1,17 +1,28 @@
-const inputText = document.getElementById("inputText");
 const canvasDiv = document.getElementById("canvasDiv");
+const qrDiv = document.getElementById("qrDiv");
+const inputText = document.getElementById("inputText");
+const qrText = document.getElementById("qrText");
 
 function generateCode() {
-    if(inputText.value == "") {
+    if(inputText.value == ""){
         alert("Please enter your text");
     } else {
         var qr = new QRious({
             element: canvasDiv,
             value: inputText.value,
-            foreground: "#800080",
+            foreground: "green",
             size: 200,
-        });
+          });
 
-        canvasDiv.style.display = "inline-block";
+        qrDiv.style.display = "inline-block";
+
+        qrText.innerText = inputText.value;
+
+        inputText.value = "";
     }
+}
+
+function closeQr() {
+    qrDiv.style.display = "none";
+    qrText.innerText = "";
 }
